@@ -96,13 +96,14 @@ html {
   background: #F8F8F8
     url(background.jpg) center center no-repeat fixed; background-size:cover;
 }*/
-/*body {
-  max-width:800px;
-  margin:25px auto;
-}*/
+*body {
+  max-width:auto;
+  max-height:auto;
+  /*margin:25px auto;*/
+}
 header, #content, footer { 
-  background: rgba(0,0,0,.8); 
-  padding:25px;
+  /*background: rgba(0,0,0,.8); 
+  padding:25px;*/
   color:#FFFFFF; 
 }
 
