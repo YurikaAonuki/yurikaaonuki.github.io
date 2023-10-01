@@ -20,7 +20,7 @@ body {
 a {
   font-weight: normal;
   text-decoration: none; 
-  color:#EF6D3D;
+  color:#2E86C1;
 }
 a:focus {
   outline: thin dotted;
@@ -104,7 +104,7 @@ html {
 header, #content, footer { 
   /*background: rgba(0,0,0,.8); 
   padding:25px;*/
-  color:#0f0000; 
+  color:#000000; 
 }
 
 /* Menu Links */
@@ -120,14 +120,14 @@ ul.main-menu li a {
   margin-right:20px;
   font-size:2.0rem;
   border-bottom: solid transparent 3px;
-  color:#cfd2da;
+  color:#000000;
 }
 ul.main-menu li a:hover {
-  color:#FFFFFF;
+  color:#000000;
 }
 ul.main-menu li a.active {
-  color:#FFFFFF;
-  border-bottom-color:#EF6D3D;
+  color:#000000;
+  border-bottom-color:##2E86C1;
 }
 
 /* Utility classes */
