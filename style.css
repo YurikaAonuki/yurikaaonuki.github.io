@@ -125,9 +125,11 @@ ul.main-menu li a {
   color:#000000;
 }
 ul.main-menu li a:hover {
+  margin: 2rem 2rem 2rem 2rem; 
   color:#000000;
 }
 ul.main-menu li a.active {
+  margin: 2rem 2rem 2rem 2rem; 
   color:#000000;
   border-bottom-color:##2E86C1;
 }
