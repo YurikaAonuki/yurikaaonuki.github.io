@@ -1,151 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Yurika Aonuki</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-    }
-
-    header {
-      background-color: #f8f8f8;
-      padding: 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    h1 {
-      margin: 0 0 10px 0;
-    }
-
-    .main-menu {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      gap: 20px;
-    }
-
-    .main-menu li a {
-      text-decoration: none;
-      color: #333;
-      padding: 5px 10px;
-      border-radius: 5px;
-    }
-
-    .main-menu li a.active {
-      background-color: #ddd;
-      font-weight: bold;
-    }
-
-    #container {
-      padding: 20px;
-    }
-
-    .row {
-      display: flex;
-      align-items: flex-start;
-      gap: 20px;
-    }
-
-    .profile-img {
-      margin-left: 20px;
-    }
-
-    .profile-text {
-      max-width: 600px;
-    }
-
-    iframe {
-      width: 100%;
-      height: calc(100vh - 200px); /* Adjust this value based on header height */
-      border: none;
-    }
-
-    /* Hide by default for each section */
-    .content-region {
-      display: none;
-    }
-
-    /* Show by default for demo purposes (remove this line in production) */
-    .content-region#about {
-      display: block;
-    }
-  </style>
-</head>
-<body>
-
-  <header id="header">
-    <h1>Yurika Aonuki</h1>
-    <ul class="main-menu">
-      <li><a href="#about" class="active">about</a></li>  
-      <li><a href="#research">research</a></li>
-      <li><a href="#cv">CV</a></li>  
-      <li><a href="#contact">contact</a></li>
-    </ul>
-  </header>
-
-  <div id="container">
-    <div class="inner">
-      <div id="content"> 
-
-        <!-- ABOUT SECTION -->
-        <div id="about" class="content-region">
-          <div class="row">
-            <img src="profilephoto.png" width="200" class="profile-img">
-            <div class="profile-text">
-              <p>I'm a third-year Ph.D. student in linguistics at <a href="https://linguistics.mit.edu/">Massachusetts Institute of Technology (MIT)</a>, with focus on semantics, fieldwork, and more recently, experimental methods. <br>
-              I primarily work on Gitksan (Tsimshianic) and Japanese, and I am part of the <a href="https://blogs.ubc.ca/gitksanlab/">UBC Gitksan Research Lab</a>. I have also worked on and continue to be interested in American Sign Language (ASL). <br>
-              I am especially interested in tense, aspect, modality, and degrees.<br>
-              I have a BA and an MA from <a href="https://linguistics.ubc.ca/">University of British Columbia</a>. <a href="http://hdl.handle.net/2429/79536">My MA thesis</a> was on tense semantics in Gitksan, Japanese, and English. <a href="https://cla-acl.ca/pdfs/actes-2019/Aonuki-CLA-2019.pdf">My BA thesis</a> was on adjective intensification in ASL.<br> </p>
-	      <p>
-              Please see "research'' and "CV" for my work.
-              </p>
-            </div>
-          </div>
-        </div>
-	<div id="research" class="content-region">
-	<p>
-        <b>Degrees</b>
-        </p>
-        <!-- CV SECTION -->
-        <div id="cv" class="content-region">
-          <iframe src="AonukiCV20240206.pdf"></iframe>
-        </div>
-	
-	<div id="contact" class="content-region hide">
-           <!--  <h2>Contact</h2>  -->
-            <p>
-              aonuki_y@mit.edu
-            </p>
-        </div>
-      </div>
+<!-- ABOUT SECTION -->
+<div id="about" class="content-region">
+  <div class="row">
+    <img src="profilephoto.png" width="200" class="profile-img">
+    <div class="profile-text">
+      <p>I'm a third-year Ph.D. student in linguistics at ...
+      </p>
+      <p>Please see "research" and "CV" for my work.</p>
     </div>
   </div>
+</div>
 
-  <script>
-    // Optional JavaScript to highlight current tab based on location.hash
-    const links = document.querySelectorAll('.main-menu a');
-    const sections = document.querySelectorAll('.content-region');
+<!-- RESEARCH SECTION -->
+<div id="research" class="content-region">
+  <p><b>Degrees</b></p>
+  <!-- Add more research content here -->
+</div>
 
-    function updateActiveTab() {
-      links.forEach(link => link.classList.remove('active'));
-      sections.forEach(sec => sec.style.display = 'none');
+<!-- CV SECTION -->
+<div id="cv" class="content-region">
+  <iframe src="AonukiCV20240206.pdf"></iframe>
+</div>
 
-      const hash = window.location.hash || '#about';
-      const activeLink = document.querySelector(`.main-menu a[href="${hash}"]`);
-      const activeSection = document.querySelector(hash);
-
-      if (activeLink) activeLink.classList.add('active');
-      if (activeSection) activeSection.style.display = 'block';
-    }
-
-    window.addEventListener('hashchange', updateActiveTab);
-    window.addEventListener('load', updateActiveTab);
-  </script>
-
-</body>
-</html>
+<!-- CONTACT SECTION -->
+<div id="contact" class="content-region">
+  <p>aonuki_y@mit.edu</p>
+</div>
