@@ -27,6 +27,7 @@
       margin: 0;
       display: flex;
       gap: 20px;
+      flex-wrap: wrap;
     }
 
     .main-menu li a {
@@ -34,6 +35,7 @@
       color: #333;
       padding: 5px 10px;
       border-radius: 5px;
+      display: inline-block;
     }
 
     .main-menu li a.active {
@@ -47,11 +49,13 @@
 
     .row {
       display: flex;
+      flex-wrap: wrap;
       align-items: flex-start;
       gap: 20px;
     }
 
     .profile-img {
+      width: 200px;
       margin-left: 20px;
     }
 
@@ -65,12 +69,25 @@
       border: none;
     }
 
+    /* Hide all sections by default */
     .content-region {
       display: none;
     }
 
     .content-region.active {
       display: block;
+    }
+
+    /* Shared padding class for non-image sections */
+    .aligned-content {
+      padding-left: 0;
+    }
+
+    /* On larger screens, align with image width + margin */
+    @media (min-width: 700px) {
+      .aligned-content {
+        padding-left: 220px; /* 200px image + 20px margin */
+      }
     }
   </style>
 </head>
@@ -90,58 +107,24 @@
     <div class="inner">
       <div id="content"> 
 
+        <!-- ABOUT SECTION -->
         <div id="about" class="content-region">
           <div class="row">
-            <img src="profilephoto.png" width="200" class="profile-img">
+            <img src="profilephoto.png" class="profile-img">
             <div class="profile-text">
-              <p>I'm a third-year Ph.D. student in linguistics at <a href="https://linguistics.mit.edu/">Massachusetts Institute of Technology (MIT)</a>, with focus on semantics, fieldwork, and more recently, experimental methods. <br>
-              I primarily work on Gitksan (Tsimshianic) and Japanese, and I am part of the <a href="https://blogs.ubc.ca/gitksanlab/">UBC Gitksan Research Lab</a>. I have also worked on and continue to be interested in American Sign Language (ASL). <br>
-              I am especially interested in tense, aspect, modality, and degrees.<br>
-              I have a BA and an MA from <a href="https://linguistics.ubc.ca/">University of British Columbia</a>. <a href="http://hdl.handle.net/2429/79536">My MA thesis</a> was on tense semantics in Gitksan, Japanese, and English. <a href="https://cla-acl.ca/pdfs/actes-2019/Aonuki-CLA-2019.pdf">My BA thesis</a> was on adjective intensification in ASL.<br> </p>
+              <p>I'm a third-year Ph.D. student in linguistics at <a href="https://linguistics.mit.edu/">Massachusetts Institute of Technology (MIT)</a>, with focus on semantics, fieldwork, and more recently, experimental methods.</p>
+              <p>I primarily work on Gitksan (Tsimshianic) and Japanese, and I am part of the <a href="https://blogs.ubc.ca/gitksanlab/">UBC Gitksan Research Lab</a>. I have also worked on and continue to be interested in American Sign Language (ASL).</p>
+              <p>I am especially interested in tense, aspect, modality, and degrees.</p>
+              <p>I have a BA and an MA from <a href="https://linguistics.ubc.ca/">University of British Columbia</a>. <a href="http://hdl.handle.net/2429/79536">My MA thesis</a> was on tense semantics in Gitksan, Japanese, and English. <a href="https://cla-acl.ca/pdfs/actes-2019/Aonuki-CLA-2019.pdf">My BA thesis</a> was on adjective intensification in ASL.</p>
               <p>Please see "research" and "CV" for my work.</p>
             </div>
           </div>
         </div>
 
+        <!-- RESEARCH SECTION -->
         <div id="research" class="content-region">
-          <p><b>Degrees</b></p>
-        </div>
-
-        <div id="cv" class="content-region">
-          <iframe src="AonukiCV20240206.pdf"></iframe>
-        </div>
-
-        <div id="contact" class="content-region">
-          <p>aonuki_y@mit.edu</p>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const links = document.querySelectorAll('.main-menu a');
-    const sections = document.querySelectorAll('.content-region');
-
-    function updateActiveTab() {
-      const hash = window.location.hash || '#about';
-
-      // Remove all active states
-      links.forEach(link => link.classList.remove('active'));
-      sections.forEach(sec => sec.classList.remove('active'));
-
-      // Highlight current tab and show corresponding section
-      const activeLink = document.querySelector(`.main-menu a[href="${hash}"]`);
-      const activeSection = document.querySelector(hash);
-
-      if (activeLink) activeLink.classList.add('active');
-      if (activeSection) activeSection.classList.add('active');
-    }
-
-    // Initialize on page load and on hash change
-    window.addEventListener('load', updateActiveTab);
-    window.addEventListener('hashchange', updateActiveTab);
-  </script>
-
-</body>
-</html>
+          <div class="aligned-content">
+            <p><b>Degrees</b></p>
+            <ul>
+              <li>Ph.D. in Linguistics, MIT (in progress)</li>
+              <li>MA in Linguistics, University of Br
