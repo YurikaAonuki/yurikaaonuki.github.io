@@ -127,4 +127,58 @@
             <p><b>Degrees</b></p>
             <ul>
               <li>Ph.D. in Linguistics, MIT (in progress)</li>
-              <li>MA in Linguistics, University of Br
+              <li>MA in Linguistics, University of British Columbia</li>
+              <li>BA in Linguistics, University of British Columbia</li>
+            </ul>
+            <p><b>Research Interests</b></p>
+            <ul>
+              <li>Semantics (tense, aspect, modality, degrees)</li>
+              <li>Fieldwork on Gitksan and Japanese</li>
+              <li>Sign Language linguistics (ASL)</li>
+              <li>Experimental methods in semantics/pragmatics</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- CV SECTION -->
+        <div id="cv" class="content-region">
+          <div class="aligned-content">
+            <iframe src="AonukiCV20240206.pdf"></iframe>
+          </div>
+        </div>
+
+        <!-- CONTACT SECTION -->
+        <div id="contact" class="content-region">
+          <div class="aligned-content">
+            <p>Email: aonuki_y@mit.edu</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const links = document.querySelectorAll('.main-menu a');
+    const sections = document.querySelectorAll('.content-region');
+
+    function updateActiveTab() {
+      const hash = window.location.hash || '#about';
+
+      links.forEach(link => link.classList.remove('active'));
+      sections.forEach(sec => sec.classList.remove('active'));
+
+      const activeLink = document.querySelector(`.main-menu a[href="${hash}"]`);
+      const activeSection = document.querySelector(hash);
+
+      if (activeLink) activeLink.classList.add('active');
+      if (activeSection) activeSection.classList.add('active');
+    }
+
+    window.addEventListener('load', updateActiveTab);
+    window.addEventListener('hashchange', updateActiveTab);
+  </script>
+
+</body>
+</html>
+
