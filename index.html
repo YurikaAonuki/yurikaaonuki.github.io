@@ -1,172 +1,153 @@
-<!doctype html>
-<html>
-  <head>
-    <!-- Page setup -->
-    <meta charset="utf-8">
-    <title>Yurika Aonuki</title>
-    <meta name="description" content="Linguistics PhD student at MIT. Semantics, fieldwork, Gitksan, and Japanese.">
-    <meta name="author" content="Yurika Aonuki">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
-    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
-  
-    <!-- Stylesheets -->
-    <!-- Reset default styles and add support for google fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet" type="text/css" />
-    <link href="http://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css" />
-   
-    <!-- Custom styles -->
-    <link href="style.css" rel="stylesheet" type="text/css" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Yurika Aonuki</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>    
+    header {
+      background-color: #f8f8f8;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
-    <!-- Want to add Bootstrap? -->
-    <!-- Visit: https://getbootstrap.com/docs/4.3/getting-started/introduction/ -->
-    
-  </head>
-  
-  <body>
+    h1 {
+      margin: 0 0 10px 0;
+    }
 
-    <header id="header">
-      <h1>Yurika Aonuki</h1>
-      
-      <!-- Menu link fragment #id should match a div id. Example: <a href="#home"> links to <div id="home"></div>  -->
-      <ul class="main-menu">
-        <li><a href="#about">about</a></li>  
-        <li><a href="#research">research</a></li>
-        <li><a href="#cv">CV</a></li>  
-        <li><a href="#contact">contact</a></li>
-      </ul>                 
-    </header>
-   
-    <div id="container";>
-      <div class="inner">
-        <div id="content"> 
-          
-          <div id="about" class="content-region hide">
-            <!-- <h2>About</h2> -->
-            <div class="row">
-              <img src="profilephoto.png" width="200">
-            <div class="column">
-            <p>
-              I'm a third-year Ph.D. student in linguistics at <a href="https://linguistics.mit.edu/">Massachusetts Institute of Technology (MIT)</a>, with focus on semantics, fieldwork, and more recently, experimental methods. <br>
+    .main-menu {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 20px;
+    }
+
+    .main-menu li a {
+      text-decoration: none;
+      color: #333;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    .main-menu li a.active {
+      background-color: #ddd;
+      font-weight: bold;
+    }
+
+    #container {
+      padding: 20px;
+    }
+
+    .row {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+    }
+
+    .profile-img {
+      margin-left: 20px;
+    }
+
+    .profile-text {
+      max-width: 600px;
+    }
+
+    iframe {
+      width: 100%;
+      height: calc(100vh - 200px); /* Adjust this value based on header height */
+      border: none;
+    }
+
+    /* Hide by default for each section */
+    .content-region {
+      display: none;
+    }
+
+    /* Show by default for demo purposes (remove this line in production) */
+    .content-region#about {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="header">
+    <h1>Yurika Aonuki</h1>
+    <ul class="main-menu">
+      <li><a href="#about" class="active">about</a></li>  
+      <li><a href="#research">research</a></li>
+      <li><a href="#cv">CV</a></li>  
+      <li><a href="#contact">contact</a></li>
+    </ul>
+  </header>
+
+  <div id="container">
+    <div class="inner">
+      <div id="content"> 
+
+        <!-- ABOUT SECTION -->
+        <div id="about" class="content-region">
+          <div class="row">
+            <img src="profilephoto.png" width="200" class="profile-img">
+            <div class="profile-text">
+              <p>I'm a third-year Ph.D. student in linguistics at <a href="https://linguistics.mit.edu/">Massachusetts Institute of Technology (MIT)</a>, with focus on semantics, fieldwork, and more recently, experimental methods. <br>
               I primarily work on Gitksan (Tsimshianic) and Japanese, and I am part of the <a href="https://blogs.ubc.ca/gitksanlab/">UBC Gitksan Research Lab</a>. I have also worked on and continue to be interested in American Sign Language (ASL). <br>
               I am especially interested in tense, aspect, modality, and degrees.<br>
-              I have a BA and an MA from <a href="https://linguistics.ubc.ca/">University of British Columbia</a>. <a href="http://hdl.handle.net/2429/79536">My MA thesis</a> was on tense semantics in Gitksan, Japanese, and English. <a href="https://cla-acl.ca/pdfs/actes-2019/Aonuki-CLA-2019.pdf">My BA thesis</a> was on adjective intensification in ASL.<br> 
-            </p>
-            <p>
+              I have a BA and an MA from <a href="https://linguistics.ubc.ca/">University of British Columbia</a>. <a href="http://hdl.handle.net/2429/79536">My MA thesis</a> was on tense semantics in Gitksan, Japanese, and English. <a href="https://cla-acl.ca/pdfs/actes-2019/Aonuki-CLA-2019.pdf">My BA thesis</a> was on adjective intensification in ASL.<br> </p>
+	      <p>
               Please see "research'' and "CV" for my work.
-            </p>
-            </div>
-            </div>
-          </div>
-          <div id="research" class="content-region hide">
-            <!-- <h2>Research</h2>  -->
-            <div class="row">
-            <div class="column">
-              <div style=“text-indent: -36px; padding-left: 36px;”>
-              <p>
-              <b>Degrees</b>
               </p>
-              <p>
-              Aonuki, Yurika (2024). <a href="Aonuki_CLS60_degree_handout_share.pdf">Inherent context sensitivity in two unrelated degreeful languages</a>. <em>CLS 60</em>, May 26-28. 
-              </p>
-              <p>
-              Aonuki, Yurika (to appear). <a href="https://ling.auf.net/lingbuzz/007861">“Inherently context-sensitive gradable adjectives”</a>. In <em>Proceedings of Sinn und Bedeutung 28</em>. Ruhr-Universität Bochum.
-              <p>
-              Aonuki, Yurika (2023). “Degree semantics in Gitksan and Japanese”. Invited talk at University of British Columbia Linguistics Outside the Classroom, 11 August.
-              </p>
-              <p>
-              <b>Tense</b>
-              </p>
-              <p>
-              Aonuki, Yurika (2021). <a href="http://hdl.handle.net/2429/79536">"Relative pronominal tense: Evidence from Gitksan, Japanese, and English"</a>. MA thesis. University of British Columbia.
-              </p>
-              <p>
-              Aonuki, Yurika (2022). <a href="https://doi.org/10.18148/sub/2022.v26i0.988">“Morphological tenselessness and SOT: Evidence for a covert relative pronominal tense in Gitksan”</a>. In <em>Proceedings of Sinn und Bedeutung 26</em>. Ed. by Daniel Gutzmann and Sophie Repp. University of Cologne, pp. 55–73.
-              </p>
-              <p>
-              Aonuki, Yurika (to appear). “Covert relative non-future tense in Gitksan”. In <em>Proceedings of West Coast Conferencein Formal Linguistics (WCCFL) 39</em>. Somerville, MA: Cascadilla Press.
-              </p>
-              <p>
-              Aonuki, Yurika (2022). Relative pronominal tense in Gitksan and Japanese. Invited talk at UC Berkeley Syntax and Semantics Circle, 18 February.
-              </p>
-              <p>
-              Aonuki, Yurika (2021). Covert relative pronominal tense in Gitksan. Paper presented at <em>Workshop on Structure and Constituency in Languages of the Americas (WSCLA) 25</em>, Sogang University, 28-30 May.
-              </p>
-              <p>
-              Aonuki, Yurika (2021). Revisiting pronominal vs. existential past tense denotations in English and Japanese. Paper presented at <em>Canadian Linguistics Association (CLA) 2021</em>, virtual, 4-7 June.
-              </p>
-              <p>
-              <b>Perfect</b>
-              </p>
-              <p>
-              Bertrand, Anne, Yurika Aonuki, Sihwei Chen, Henry Davis, Joash Gambarage, Laura Griﬀin, Marianne Huijsmans, Lisa Matthewson, Daniel Reisinger, Hotze Rullmann, Raiane Salles, Michael David Schwan, Neda Todorović, Bailey Trotter, and Jozina Vander Klok (2022). <a href="https://www.mdpi.com/1674678"> “Nobody’s perfect”</a>. In <em>Languages 7.2</em>, pp. 1-28.
-              </p>
-              <p>
-              <b>Aspectual `still'/`just' in Gitksan</b>
-              </p>
-              <p>
-              Aonuki, Yurika (2020). <a href="https://www.lingref.com/cpp/wccfl/37/abstract3516.html">“Unifying the ‘still’ and ‘just’ readings of <em>ḵ’ay</em> in Gitksan”</a>. In <em>Proceedings of West Coast Conference in Formal Linguistics (WCCFL) 37</em>. Somerville, MA: Cascadilla Press. 
-              </p>  
-              <p>
-              <b>Free relatives in Gitksan</b>
-              </p>
-              <p>
-              Aonuki, Yurika (2023). “Free relatives in Gitksan”. In <em>Proceedings of Semantics of Under-Represented Languagesin the Americas (SULA) 11</em>. University of Massachusetts Amherst GLSA.
-              </p>  
-              <p>
-              <b>Sign language phonetics and phonology</b>
-              </p>
-              <p>
-              Tkachman, Oksana, Kathleen Currie Hall, Robert Fuhrman, and Yurika Aonuki (2019). <a href="https: //www.sciencedirect.com/science/article/pii/S0095447018300214">“Visible amplitude: Towards quantifying prominence in sign language”</a>. In <em>Journal of Phonetics 77</em>, pp. 1-23.
-              </p>  
-              <p>
-              Hall, Kathleen Currie, Oksana Tkachman, and Yurika Aonuki (to appear). “Perceived Magnitudes of Movement in American Sign Language”. In <em></em>Proceedings of Chicago Linguistics Society (CLS) 57</m>. IL, University of Chicago.
-              </p>
-              <p>
-              Hall, Kathleen Currie, Oksana Tkachman, and Yurika Aonuki (2019). "Lexical competition correlates with articulatory enhancement in ASL". Paper presented at <em>Theoretical Issues in Sign Language Research (TISLR) 13</em>, Universität Hamburg, 26-28 September.
-              </p>
-              <p>
-              Aonuki, Yurika (2019). <a href="https://cla-acl.ca/pdfs/actes- 2019/Aonuki-CLA-2019.pdf">"Adjective intensification in American Sign Language”</a>. In <em>Proceedings of Canadian Linguistics Association (CLA) 2019</em>. Vancouver, University of British Columbia.
-              </p>
-              <p>
-              Hall, Kathleen Currie, Oksana Tkachman, and Yurika Aonuki (2019). "Lexical competition and articulatory enhancement in American Sign Language". Paper presented at <em>Canadian Linguistics Association (CLA) 2019</em>, Vancouver, University of British Columbia, 1-3 June.
-              </p>
-              <p>
-              Tkachman, Oksana, Robert Fuhrman, Kathleen Currie Hall, Yurika Aonuki, and Bryan Gick (2018). Visible Energy in signed languages: Explaining a trade-off between sign location and sign handedness. Paper presented at <em>Laboratory Phonology (LabPhon) 16</em>, Universidade de Lisboa, 19-22 June.
-              </p>
-              </div>
-            </div>
             </div>
           </div>
-          <div id="cv" class="content-region hide">
-            <p>
-              <object data="AonukiCV20240206.pdf" width="100%" height="500px">
-              <p>Unable to display PDF file. <a href="AonukiCV20240206.pdf">Download</a> instead.</p>
-              </object>
-            <!-- <p>Unable to display PDF file. <a href="">Download</a> instead.</p> -->
-              <!-- </object> -->
-            </p>
-          </div>
-          
-          <div id="contact" class="content-region hide">
+        </div>
+	<div id="research" class="content-region">
+	<p>
+        <b>Degrees</b>
+        </p>
+        <!-- CV SECTION -->
+        <div id="cv" class="content-region">
+          <iframe src="CV.pdf"></iframe>
+        </div>
+	
+	<div id="contact" class="content-region hide">
            <!--  <h2>Contact</h2>  -->
             <p>
               aonuki_y@mit.edu
             </p>
-          </div>
-          
         </div>
+        
+
       </div>
     </div>
+  </div>
 
-    <footer>  
-      
-    </footer>
-    
-    <!-- Load additional JS scripts here -->
-    <script type="text/javascript" src="script.js"></script>
-    
-  </body>
+  <script>
+    // Optional JavaScript to highlight current tab based on location.hash
+    const links = document.querySelectorAll('.main-menu a');
+    const sections = document.querySelectorAll('.content-region');
+
+    function updateActiveTab() {
+      links.forEach(link => link.classList.remove('active'));
+      sections.forEach(sec => sec.style.display = 'none');
+
+      const hash = window.location.hash || '#about';
+      const activeLink = document.querySelector(`.main-menu a[href="${hash}"]`);
+      const activeSection = document.querySelector(hash);
+
+      if (activeLink) activeLink.classList.add('active');
+      if (activeSection) activeSection.style.display = 'block';
+    }
+
+    window.addEventListener('hashchange', updateActiveTab);
+    window.addEventListener('load', updateActiveTab);
+  </script>
+
+</body>
 </html>
